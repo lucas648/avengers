@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { from, Observable } from 'rxjs';
 import api from './config';
 import { Store } from '@ngrx/store';
-import { AppState } from '../store/app.state';
-import { loadComicsSuccess } from '../store/actions/comics';
+import { AppState } from '../app/store/app.state';
+import { loadComicsSuccess } from '../app/store/actions/comics';
 
 @Injectable({
     providedIn: 'root'

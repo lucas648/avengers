@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ComicsService } from '../api/getComics';
-import { ListItemsModel } from '../components/ListItems/Models/ListItemsModel';
+import { ListItemsModel } from './components/ListItems/Models/ListItemsModel';
 import { RouterOutlet } from '@angular/router';
 import { map, Observable } from 'rxjs';
-import { selectComics } from '../store/selectors/comics';
-import { AppState } from '../store/app.state';
+import { selectComics } from './store/selectors/comics';
+import { AppState } from './store/app.state';
 import { Store } from '@ngrx/store';
-import { loadComicsSuccess } from '../store/actions/comics';
-import { ComicsState } from '../store/reducers/comics';
+import { loadComicsSuccess } from './store/actions/comics';
+import { ComicsState } from './store/reducers/comics';
 
 @Component({
   selector: 'app-root',
