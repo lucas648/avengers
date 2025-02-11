@@ -5,9 +5,9 @@ import { ComicsState } from '../../store/reducers/comics';
 import { deleteComic, updateComic } from '../../store/actions/comics';
 
 @Component({
-  selector: 'app-edit-modal',
-  templateUrl: './edit-modal.component.html',
-  styleUrls: ['./edit-modal.component.css']
+  selector: 'EdditModal',
+  templateUrl: './EditModal.html',
+  //styleUrls: ['./edit-modal.component.css']
 })
 export class EditModalComponent {
   @Input() item!: ComicsState;

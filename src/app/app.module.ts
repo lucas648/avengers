@@ -7,6 +7,8 @@ import { StoreModule } from '@ngrx/store';
 import { comicsReducer } from './store/reducers/comics';
 import { CommonModule } from '@angular/common';
 import { EditModalComponent } from './components/EditModal/EditModal';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { EditModalComponent } from './components/EditModal/EditModal';
     CommonModule,
     HttpClientModule,
     StoreModule.forRoot({ comics: comicsReducer }),
-    NgModule
+    NgbModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,8 +3,8 @@ import { ComicsState } from '../../store/reducers/comics';
 
 @Component({
   standalone: true,
-  selector: 'app-list-item',
-  templateUrl: './list-items.component.html',
+  selector: 'ListItemComponent',
+  templateUrl: './listItems.component.html',
   //styleUrls: ['./list-item.component.css']
 })
 export class ListItemComponent {
