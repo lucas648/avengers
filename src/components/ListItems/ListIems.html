@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let item of items" class="item">
+        <img [src]="item.image" [alt]="item.title">
+        <h3>{{ item.name }}</h3>
+    </li>
+</ul>
