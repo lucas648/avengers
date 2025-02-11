@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ListItemsModel } from './Models/ListItemsModel';
+import { ComicsState } from '../../store/reducers/comics';
 
 @Component({
     standalone: true,
@@ -8,5 +8,5 @@ import { ListItemsModel } from './Models/ListItemsModel';
     //styleUrls: ['./list-item.component.css']
 })
 export class ListItemComponent {
-    @Input() items!: ListItemsModel[];
+    @Input() items!: ComicsState[];
 }

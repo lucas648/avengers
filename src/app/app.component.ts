@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ComicsService } from '../api/getComics';
-import { ListItemsModel } from './components/ListItems/Models/ListItemsModel';
+import { ComicsService } from './api/getComics';
 import { RouterOutlet } from '@angular/router';
 import { map, Observable } from 'rxjs';
 import { selectComics } from './store/selectors/comics';
@@ -21,13 +20,12 @@ export class AppComponent implements OnInit {
 
   constructor(private comicsService: ComicsService, private store: Store<AppState>) {
     this.items$ = this.store.select(selectComics).pipe(
-      map((state: ComicsState) => state.characters)
+      map((state: ComicsState) => state)
     );
   }
 
   ngOnInit(): void {
-    this.comicsService.getComics().subscribe((data: ListItemsModel[]) => {
-      console.log(data);
+    this.comicsService.getComics().subscribe((data: ComicsState[]) => {
       this.store.dispatch(loadComicsSuccess({ comics: data }));
     });
   }
