@@ -7,3 +7,10 @@ export const loadComicsSuccess = createAction(
 );
 
 export const setComic = createAction('[Comic] Set Comic', props<{ comic: ComicsState }>());
+
+export const updateComic = createAction('[Comic] Update Comic', props<{ comic: ComicsState }>());
+
+export const deleteComic = createAction(
+    '[Comics] Delete Comic',
+    props<{ comicId: number }>()
+);

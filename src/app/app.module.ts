@@ -6,17 +6,20 @@ import { ListItemComponent } from './components/ListItems/ListItems';
 import { StoreModule } from '@ngrx/store';
 import { comicsReducer } from './store/reducers/comics';
 import { CommonModule } from '@angular/common';
+import { EditModalComponent } from './components/EditModal/EditModal';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListItemComponent
+    ListItemComponent,
+    EditModalComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
     HttpClientModule,
-    StoreModule.forRoot({ comics: comicsReducer })
+    StoreModule.forRoot({ comics: comicsReducer }),
+    NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]

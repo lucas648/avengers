@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import { setComic } from '../actions/comics';
+import { deleteComic, loadComicsSuccess, setComic, updateComic } from '../actions/comics';
 
 export interface ComicsState {
     id: number;
@@ -136,7 +136,10 @@ export const initialComicState: ComicsState[] = [
 
 export const comicReducer = createReducer(
     initialComicState,
-    on(setComic, (state, { comic }) => ({ ...state, ...comic }))
+    on(setComic, (state, { comic }) => ({ ...state, ...comic })),
+    on(loadComicsSuccess, (state, { comics }) => [...comics]),
+    on(updateComic, (state, { comic }) => state.map(c => c.id === comic.id ? comic : c)),
+    on(deleteComic, (state, { comicId }) => state.filter(c => c.id !== comicId))
 );
 
 export function comicsReducer(state: any, action: any) {

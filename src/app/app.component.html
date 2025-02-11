@@ -41,8 +41,11 @@
   <div class="content">
     <ListItemComponent 
       [items]="items$" 
+      (itemClick)="handleItemClick($event)"
     >
     </ListItemComponent>
+
+    <app-edit-modal #editComicsModal></app-edit-modal>
   </div>
 </main>
 

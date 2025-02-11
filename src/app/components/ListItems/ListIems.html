@@ -1,5 +1,7 @@
 <ul>
-    <li *ngFor="let item of items" class="item">
+    <li *ngFor="let item of items" class="item" (click)="onItemClick(item)">
         <h1>{{ item.title }}</h1>
+        <button (click)="onItemDelete(item)">Delete</button>
+        <button (click)="onItemEdit(item)">Edit</button>
     </li>
 </ul>

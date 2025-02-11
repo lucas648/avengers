@@ -1,0 +1,29 @@
+<div class="modal-header">
+    <h5 class="modal-title">Edit Comic</h5>
+    <button type="button" class="btn-close" aria-label="Close" (click)="dismiss()"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input id="title" [(ngModel)]="item.title" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="author" class="form-label">Author:</label>
+        <input id="author" [(ngModel)]="item.author" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="publisher" class="form-label">Publisher:</label>
+        <input id="publisher" [(ngModel)]="item.publisher" type="text" class="form-control" />
+      </div>
+      <div class="mb-3">
+        <label for="year" class="form-label">Year:</label>
+        <input id="year" [(ngModel)]="item.year" type="number" class="form-control" />
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="dismiss()">Close</button>
+    <button type="button" class="btn btn-danger" (click)="delete()">Delete</button>
+    <button type="button" class="btn btn-primary" (click)="save()">Save changes</button>
+  </div>
